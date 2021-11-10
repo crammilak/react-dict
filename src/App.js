@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import Parent from './components/Parent'
+import React from 'react'
 
-function App() {
+
+const App = () => {
+
+  const [Fruits, setFruits] = useState([
+    {
+      id: 1,
+      fruit: 'Mango',
+    },
+    {
+      id: 2,
+      fruit: 'Mango',
+    },
+    {
+      id: 3,
+      fruit: 'Grapes',
+    },
+    {
+      id: 4,
+      fruit: 'Strawberry',
+    },
+    {
+      id: 4,
+      fruit: 'Orange',
+    }
+  ])
+
+  const [Vegetables, setVegetables] = useState([
+    {
+      id: 1,
+      vege: 'Brocolli',
+    },
+    {
+      id: 2,
+      vege: 'Lettuce',
+    },
+    {
+      id: 3,
+      vege: 'Carrot',
+    },
+    {
+      id: 4,
+      vege: 'Potato',
+    },
+    {
+      id: 4,
+      vege: 'Cabbage',
+    }
+
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Parent />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
